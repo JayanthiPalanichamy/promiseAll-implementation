@@ -1,4 +1,4 @@
-promiseAll = (inputPromises) => {
+const promiseAll = (inputPromises) => {
     let resolvedPromises = [];
     return new Promise((resolve, reject) => {
         for (let promise of inputPromises) {
@@ -14,13 +14,13 @@ promiseAll = (inputPromises) => {
     })
 };
 
-a = Promise.resolve(2);
-b = Promise.resolve(4);
-c = Promise.resolve(5);
+const a = Promise.resolve(2);
+const b = Promise.resolve(4);
+const c = Promise.resolve(5);
 promiseAll([a, b, c]).then(val => console.log(val)).catch(val => console.log(val));
 
-d = Promise.resolve(10);
-e = Promise.resolve(2);
-f = Promise.resolve(5);
-g = Promise.reject(7);
+const d = Promise.resolve(10);
+const e = Promise.resolve(2);
+const f = Promise.resolve(5);
+const g = Promise.reject(7);
 promiseAll([d, e, f, g]).then(val => console.log(val)).catch(val => console.log(`${val} is rejected`));
