@@ -1,0 +1,1 @@
+Implementing our own promiseAll method,which takes array of promises and rejects even if one of the promises is not resolved.
